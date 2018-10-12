@@ -1,0 +1,89 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+%https://www.overleaf.com/project/5bbe478ee5ec0924b125dd16
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+% Equation environment
+\newenvironment{eq}[2][Equation]
+{
+    \begin{trivlist}
+    \setlength\itemsep{11pt}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]
+    \vspace{1pt}
+    \item \hspace{16pt}
+}
+{\end{trivlist}}
+
+% Assumption environment
+\newenvironment{as}[2][assumptions]
+{
+    \begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #2}\hskip \labelsep {\bfseries #1.}]
+    \hspace{17pt}
+}
+{\end{trivlist}}
+
+% test environment
+\newenvironment{note}[2][Note]
+{
+    \begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep ({\bfseries #2})]
+    %{\bfseries #1}\hskip \labelsep ({\bfseries #2.})
+    \hspace{11pt}
+}
+{\end{trivlist}}
+
+
+% New commands
+\newcommand{\boneh}{\hat{\beta_1}}
+\newcommand{\bzeroh}{\hat{\beta_0}}
+\newcommand{\sonen}{\sum_{i=1}^n}
+\newcommand{\ybar}{\bar{y}}
+\newcommand{\xbar}{\bar{x}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+ 
+\title{Exam SRM Notes}%replace X with the appropriate number
+\author{Navid} %if necessary, replace with your course titlehttps://www.overleaf.com/project/5bbe478ee5ec0924b125dd16
+ 
+\maketitle
+ 
+
+
+\include{ch1}
+
+
+ 
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}

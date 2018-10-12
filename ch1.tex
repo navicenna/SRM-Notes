@@ -1,0 +1,28 @@
+\section*{Chapter 1 -- Simple Linear Regression}
+
+\begin{eq}{1.1.1 (SLR)} 
+   $ y = \beta_0 + \beta_1x + \epsilon $
+\end{eq}
+
+\begin{as}{Model}
+ \begin{enumerate}
+     \item Each $y_i$ is a r.v. while each $x_i$ is a measured number.
+     \item Each $\epsilon_i$ follows a normal distribution with mean 0 and variance $\sigma^2$
+ \end{enumerate}
+\end{as}
+ 
+\begin{eq}{1.2.1 (Sum of squares)}
+ $$ \mathrm{SS}(\beta_0, \beta_1) = \sum_{i=1}^{n} \big[ y_i - (\beta_0 + \beta_1 x_i) \big]^2  $$
+\end{eq}
+
+\begin{eq}{1.2.2 ($\beta_0$ and $\beta_1$)}
+ $$ \hat{\beta_1} = \frac{S_{xy}}{S_{xx}} = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i+1}^n (x_i - \bar{x})^2}  $$ 
+ $$\hat{\beta_0} = \bar{y} - \hat{\beta_1}\bar{x}$$
+ 
+ $$ S_{xy} := \sonen (x_i - \xbar)(y_i - \ybar) = \sonen x_i y_i - n \xbar\ybar \hspace{11pt}\mathrm{and} 
+  \hspace{11pt} S_xx := \sonen (x_i - \xbar)^2 = \sonen x_i^2 - n\xbar^2 $$
+\end{eq}
+
+\begin{note}{Random errors and residuals}
+    Random errors are unobservable random variables, whereas residuals are the measured errors.
+\end{note}
