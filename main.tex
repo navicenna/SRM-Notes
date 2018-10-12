@@ -55,6 +55,14 @@
 }
 {\end{trivlist}}
 
+% Fact environment
+\newenvironment{fact}[2][Fact]
+{
+    \begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep ({\bfseries #2})]
+    \hspace{17pt}
+}
+{\end{trivlist}}
 
 % New commands
 \newcommand{\boneh}{\hat{\beta_1}}
