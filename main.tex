@@ -8,6 +8,17 @@
  
 \usepackage[margin=1in]{geometry} 
 \usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{lipsum}% just to generate text for the example
+
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+\usepackage{float}
+\graphicspath{ {./images/} }
  
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -28,6 +39,7 @@
 % Equation environment
 \newenvironment{eq}[2][Equation]
 {
+    \vspace{5pt}
     \begin{trivlist}
     \setlength\itemsep{11pt}
     \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]
@@ -39,25 +51,29 @@
 % Assumption environment
 \newenvironment{as}[2][assumptions]
 {
+    \vspace{5pt}
     \begin{trivlist}
     \item[\hskip \labelsep {\bfseries #2}\hskip \labelsep {\bfseries #1.}]
-    \hspace{17pt}
+    \item
 }
 {\end{trivlist}}
 
 % test environment
 \newenvironment{note}[2][Note]
 {
+    \vspace{5pt}
     \begin{trivlist}
     \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep ({\bfseries #2})]
     %{\bfseries #1}\hskip \labelsep ({\bfseries #2.})
-    \hspace{11pt}
+    \item \hspace{11pt}
+    %\vspace{11pt}
 }
 {\end{trivlist}}
 
 % Fact environment
 \newenvironment{fact}[2][Fact]
 {
+    \vspace{5pt}
     \begin{trivlist}
     \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep ({\bfseries #2})]
     \hspace{17pt}
@@ -70,6 +86,12 @@
 \newcommand{\sonen}{\sum_{i=1}^n}
 \newcommand{\ybar}{\bar{y}}
 \newcommand{\xbar}{\bar{x}}
+\newcommand{\sxx}{S_{xx}}
+\newcommand{\sxy}{S_{xy}}
+\newcommand{\syy}{S_{yy}}
+\newcommand{\sx}{s_{x}}
+\newcommand{\sy}{s_{y}}
+
  
 \begin{document}
  
@@ -93,5 +115,4 @@
 % --------------------------------------------------------------
 %     You don't have to mess with anything below this line.
 % --------------------------------------------------------------
- 
 \end{document}
