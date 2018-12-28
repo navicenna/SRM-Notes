@@ -37,6 +37,23 @@ bic = function(l, p, n) {
   return(bic)
 }
 
+slr.beta1.stderr = function(var, sxx) {
+  stderr = sqrt(var/sxx)
+  return(stderr)
+}
+
+slr.beta1.est = function(sxy, sxx) {
+  est = sxy/sxx
+  return(est)
+}
+
+slr.rss = function(syy, b1, sxx) {
+  RegSS = b1^2 * sxx
+  TSS = syy
+  RSS = TSS - RegSS
+  return(RSS)
+}
+
 x1=c(2,5)
 x2=c(8,6)
 x3=c(1,0)
