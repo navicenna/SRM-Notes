@@ -16,6 +16,13 @@
 	sleep, 100
 	send {tab}
 	return
+::lfeq::
+	sendinput, \begin+[eq+]+[+]{enter 2}
+	sendinput, \end+[eq+]{up 2}{end}{left}
+	return
+
+::eqnext::
+	sendinput {down}+{4 4}{left 2}{space 2}{left}
 ::sxx::\sxx
 ::sxy::\sxy
 ::syy::\syy
@@ -23,6 +30,16 @@
 ::sy::\sy
 ::b1::\boneh
 ::b0::\bzeroh
+::bjhat::\hat+[\beta+]_j
+::betahat::\hat+[\beta+]
+::tmlr::t+-+[n-(k+=1), \alpha/2+]
+::times::\cdot
+::stderr::\textnormal+[SE+]
+::textnorm::
+	send \textnormal
+	sleep 100
+	send {tab}
+	return
 ::nm1::+9n-1+0
 ::nm2::+9n-2+0
 ::SAT::\textnormal+[SAT+]
