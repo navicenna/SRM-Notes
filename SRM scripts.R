@@ -54,6 +54,11 @@ slr.rss = function(syy, b1, sxx) {
   return(RSS)
 }
 
+glm.solve.pi = function(sum.params) {
+  pi = 1 / ( 1 + exp( -(sum.params) ) )
+  return(pi)
+}
+
 x1=c(2,5)
 x2=c(8,6)
 x3=c(1,0)
