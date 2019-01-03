@@ -18,6 +18,13 @@ logit = function(probability) {
   return(logitValue)
 }
 
+cluster.wcvar = function(cluster) {
+  centroid = c(mean(cluster[,1]), mean(cluster[,2]))
+  diffs = A - centroid
+  sq.dist = rowSums(diffs^2)
+  return(sum(sq.dist))
+}
+
 autocorr = function(x, lag = 1) {
   m = mean(x)
   a = head(x-m, -lag)
@@ -57,6 +64,12 @@ slr.rss = function(syy, b1, sxx) {
 glm.solve.pi = function(sum.params) {
   pi = 1 / ( 1 + exp( -(sum.params) ) )
   return(pi)
+}
+
+series.smooth.roll = function(series, k) {
+  x = filter(series, rep(1/k,k), sides=1)
+  series["rolling.avg"] = x
+  return(series)
 }
 
 x1=c(2,5)
