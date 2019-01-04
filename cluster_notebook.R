@@ -8,13 +8,12 @@ ypredict=c()
 yactual=y[2:length(y)]
 
 for(i in 1:9) {
-  if (i == 1) {
-    ypredict[i] = AR(y[1])
-  }
-  else {
-    ypredict[i] = AR(ypredict[i-1])
-  }
+    ypredict[i] = AR(y[i])
 }
+
+e = yactual - ypredict
+ce = e - mean(e)
+MSE = sum(ce^2)/7
 
 A=rbind(
   c(0 ,-3), c(-2, -5), c(-3, -5), c(-4, -5), c(-5, 2)
@@ -58,4 +57,5 @@ c(1,	9),
 c(7,	3),
 c(5,	8)
 )
-plot(pts[,1], pts[,2])
+#plot(pts[,1], pts[,2])
+sq.distance.matrix(pts)

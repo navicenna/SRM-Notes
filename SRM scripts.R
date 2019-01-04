@@ -19,8 +19,8 @@ logit = function(probability) {
 }
 
 cluster.wcvar = function(cluster) {
-  centroid = c(mean(cluster[,1]), mean(cluster[,2]))
-  diffs = A - centroid
+  centroid = colMeans(cluster)
+  diffs = t(apply(cluster, 1, function(x) {return(x - centroid)}))
   sq.dist = rowSums(diffs^2)
   return(sum(sq.dist))
 }
@@ -70,6 +70,12 @@ series.smooth.roll = function(series, k) {
   x = filter(series, rep(1/k,k), sides=1)
   series["rolling.avg"] = x
   return(series)
+}
+
+sq.distance.matrix = function(pts) {
+  matrix = dist(pts, method = "euclidean")
+  matrix = round(matrix^2, 2)
+  return(matrix)
 }
 
 x1=c(2,5)
