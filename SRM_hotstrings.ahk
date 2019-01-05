@@ -72,6 +72,12 @@
 	Sleep, 200
 	Send, {tab}
 	Return
+:*:beginnote::
+	SendInput, \begin+[note+]+[+]{enter 2}
+	SendInput, \end+[note+]
+	Send, {up 2}{end}{left}
+	Return
+:*:menv::+4+4  +4+4{left 3}
 
 
 
