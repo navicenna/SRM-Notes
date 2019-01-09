@@ -18,12 +18,12 @@ logit = function(probability) {
   return(logitValue)
 }
 
-cluster.wcvar = function(cluster) {
-  centroid = colMeans(cluster)
-  diffs = t(apply(cluster, 1, function(x) {return(x - centroid)}))
-  sq.dist = rowSums(diffs^2)
-  return(sum(sq.dist))
-}
+# cluster.wcvar = function(cluster) {
+#   centroid = colMeans(cluster)
+#   diffs = t(apply(cluster, 1, function(x) {return(x - centroid)}))
+#   sq.dist = rowSums(diffs^2)
+#   return(sum(sq.dist))
+# }
 
 autocorr = function(x, lag = 1) {
   m = mean(x)

@@ -23,9 +23,9 @@
 
 ::eqnext::
 	sendinput {down}+{4 4}{left 2}{space 2}{left}
-::sxx::\sxx
-::sxy::\sxy
-::syy::\syy
+; ::sxx::\sxx
+; ::sxy::\sxy
+; ::syy::\syy
 ::sx::\sx
 ::sy::\sy
 ::b1::\boneh
